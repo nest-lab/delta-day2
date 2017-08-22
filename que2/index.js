@@ -9,6 +9,7 @@ process.stdin.on("data", function (userInputedUrl) {
     console.log("loading...");
     // Making Request
     var stockName = userInputedUrl.toString();
+    //Fetching last 50 days pperformance approximately 2 months
     var url = `http://finance.yahoo.com/d/quotes.csv?s=${stockName}&f=m7` ;
     request(url, function (err, response, html) {
         
